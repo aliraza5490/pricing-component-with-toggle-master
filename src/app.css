@@ -1,0 +1,44 @@
+body {
+  background: url("./images/bg-top.svg"), url("./images/bg-bottom.svg"), #f6f6fe;
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
+  background-size: 23%;
+  color: #494c5f;
+}
+
+.pricing-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-head h2 {
+  font-size: 2rem;
+  color: #6d708d;
+}
+
+.pricing-head .toggle-container {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+  color: #6d708d;
+}
+
+.price-container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+/*# sourceMappingURL=app.css.map */

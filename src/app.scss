@@ -1,0 +1,49 @@
+
+
+// -------------------------------
+$primary: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+$Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+$Light-Grayish-Blue: hsl(234, 14%, 74%);
+$Grayish-Blue: hsl(233, 13%, 49%);
+$Dark-Grayish-Blue: hsl(232, 13%, 33%);
+
+body{
+  background: url('./images/bg-top.svg'), url('./images/bg-bottom.svg'), $Very-Light-Grayish-Blue;
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
+  background-size: 23%;
+  color: $Dark-Grayish-Blue;
+}
+
+.pricing-component{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pricing-head{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h2{
+    font-size: 2rem;
+    color: $Grayish-Blue;
+  }
+  .toggle-container{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+    color: $Grayish-Blue;
+  }
+}
+.price-container{
+  display: grid;
+  align-items:center;
+  justify-content: center;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 1fr;
+}
