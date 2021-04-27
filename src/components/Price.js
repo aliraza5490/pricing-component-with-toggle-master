@@ -12,16 +12,30 @@ const Container = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;    
-	color:${props => props.className === "premium" ? "white" : "hsl(233, 13 %, 49 %)"};
+	color:${props => props.className === "premium" ? "white" : "hsl(232, 13%, 33%)"};
 	min-height: ${props => props.className === "premium" ? "450px" : "400px"};
+	@media screen and (max-width: 768px){
+		min-height: unset;
+	}
+  @media screen and (max-width: 425px){
+		margin-bottom: 2rem;
+		border-radius: .8rem;
+	}
 `;
 const PriceHeading = styled.h2`
 	margin: 1rem 0;
 	font-size: 3.5rem;
+  @media screen and (max-width: 425px){
+		font-size: 4rem;
+	}
 `;
 const Info = styled.p`
 	margin: .8rem 4rem;
 	font-size: 1rem;
+	@media screen and (max-width: 425px){
+		font-size: 1.1em;
+	}
+	color:${props => props.parent === "premium" ? "white" : "hsl(233, 13%, 49%)"};
 `;
 const Hr = styled.hr`
 	width: 100%;
@@ -49,14 +63,14 @@ export default function Price({ data }) {
 	const name = data.name === "Professional" ? "premium" : "general";
 	return (
 		<Container className={name}>
-			<Info>{data.name}</Info>
+			<Info parent={name}>{data.name}</Info>
 			<PriceHeading>${data.price}</PriceHeading>
 			<Hr />
-			<Info>{data.storage} Storage</Info>
+			<Info parent={name}>{data.storage} Storage</Info>
 			<Hr />
-			<Info>{data.users} Users Allowed</Info>
+			<Info parent={name}>{data.users} Users Allowed</Info>
 			<Hr />
-			<Info>Send up to {data.send_upto} GB</Info>
+			<Info parent={name}>Send up to {data.send_upto} GB</Info>
 			<Hr />
 			<LearnMore parent={name}>Learn More</LearnMore>
 		</Container>

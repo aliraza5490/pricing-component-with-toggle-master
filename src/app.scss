@@ -13,6 +13,11 @@ body{
   background-position: top right, bottom left;
   background-size: 23%;
   color: $Dark-Grayish-Blue;
+  @media screen and (max-width: 425px){
+    background: url('./images/bg-top.svg'), $Very-Light-Grayish-Blue;
+    background-repeat: no-repeat;
+    background-position: 55vw -10vw;
+  }
 }
 
 .pricing-component{
@@ -31,13 +36,27 @@ body{
     font-size: 2rem;
     color: $Grayish-Blue;
   }
+	
   .toggle-container{
     width: 250px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 2rem 0;
-    color: $Grayish-Blue;
+    color: $Light-Grayish-Blue;
+  }
+  @media screen and (max-width: 425px){
+    width: 100%;
+    h2{
+      font-size: 2.5rem;
+      margin: 0;
+      margin-top: 4rem;
+    }
+    .toggle-container{
+      width: 70%;
+      font-size: 1.2rem;
+      margin: 3rem 0;
+    }
   }
 }
 .price-container{
@@ -46,4 +65,14 @@ body{
   justify-content: center;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: 1fr;
+  @media screen and (max-width: 425px){
+    width: 100vw;
+    margin-top: 3rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+    div{
+      width: 90%;
+    }
+  }
 }
