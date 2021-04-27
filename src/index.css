@@ -41,3 +41,8 @@ a{
 .attribution{
 	margin-top: 1rem;
 }
+@media screen and (max-width: 320px){
+  .attribution{
+    font-size: .6rem;
+  }
+}

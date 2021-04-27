@@ -58,6 +58,16 @@ body {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .pricing-head h2 {
+    margin-top: 3rem;
+  }
+  .pricing-head .toggle-container {
+    width: 80%;
+    margin: 1rem 0;
+  }
+}
+
 .price-container {
   display: grid;
   align-items: center;
@@ -75,7 +85,7 @@ body {
     place-items: center;
   }
   .price-container div {
-    width: 90%;
+    width: 88%;
   }
 }
 /*# sourceMappingURL=app.css.map */

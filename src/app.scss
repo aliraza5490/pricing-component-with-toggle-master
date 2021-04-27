@@ -58,6 +58,15 @@ body{
       margin: 3rem 0;
     }
   }
+  @media screen and (max-width: 320px){
+    h2{
+      margin-top: 3rem;
+    }
+    .toggle-container{
+      width: 80%;
+      margin: 1rem 0;
+    }
+  }
 }
 .price-container{
   display: grid;
@@ -72,7 +81,7 @@ body{
     grid-template-rows: repeat(3, 1fr);
     place-items: center;
     div{
-      width: 90%;
+      width: 88%;
     }
   }
 }
